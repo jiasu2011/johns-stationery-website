@@ -457,6 +457,19 @@ a {
   margin: 0 auto;
 }
 
+.products-hero a {
+  color: var(--amber);
+  text-decoration: underline;
+}
+
+.products-hero a:hover {
+  color: var(--cream-dark)
+}
+
+.products-hero a:active {
+  color: var(--red);
+}
+
 .category-section {
   padding: 70px 0;
   scroll-margin-top: 84px;
