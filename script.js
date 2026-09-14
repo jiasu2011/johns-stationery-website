@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var price = card.dataset.price || '';
     var brand = card.dataset.brand || '';
     var image = card.dataset.image || '';
-    var link = card.dataset.link || '#';
+    var link = 'payment.html';
 
     modalName.textContent = name;
     modalPrice.textContent = price;
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modalImage.src = image;
     modalImage.alt = brand || name;
 
-    modalStoreLink.href = link; // REPLACE WITH SALES LINK (set per-product via data-link)
+    modalStoreLink.href = link; 
 
     lastFocused = document.activeElement;
     overlay.classList.add('open');

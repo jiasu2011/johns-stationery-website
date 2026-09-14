@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catalogue | John's Japanese Stationery</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
         <a href="#erasers">Erasers</a>
         <a href="#scissors">Scissors</a>
         <a href="#accessories">Accessories</a>
-        <a href="#pencil-cases">Pen Cases</a>
+        <a href="#pencil-cases">Pen    Cases</a>
       </div>
     </div>
   </nav>
@@ -970,13 +971,28 @@
         <p class="modal-subtitle" id="modalSubtitle"></p>
         <p class="modal-price" id="modalPrice"></p>
         <p class="modal-brand" id="modalBrand"></p>
-        <a class="modal-store-link disabled" id="modalStoreLink" href="#" target="_blank" rel="noopener"><!-- REPLACE WITH SALES LINK -->
-          Order Online - Coming Soon &rarr;
+        <a class="modal-store-link" id="modalStoreLink" href="" target="_blank" rel="noopener">
+          Order Online &rarr;
         </a>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <script>
+    window.onload = function () {
+      localStorage.setItem('itemsnumber', 0);
+      localStorage.setItem('buyerplaceholder', '[]');
+      localStorage.setItem('priceplaceholder', '[]');
+    };
+    document.getElementById('modalStoreLink').addEventListener("click", () => {
+      let numberofitems = localStorage.getItem('itemsnumber');
+      localStorage.setItem('cartsize', numberofitems);
+      localStorage.setItem('product', modalBrand.textContent);
+      localStorage.setItem('price', modalPrice.textContent);
+      numberofitems++;
+      localStorage.setItem('itemsnumber', numberofitems);
+    });        
+  </script>
 </body>
 </html>

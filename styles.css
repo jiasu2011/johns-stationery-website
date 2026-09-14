@@ -238,6 +238,40 @@ a {
   100% { opacity: 0.2; }
 }
 
+.searchbar {
+  display: flex;
+  justify-content: right;
+}
+
+.searchbar-input {
+  padding: 10px;
+  width: 350px;
+}
+.searchresults {
+  display: grid;
+  background-color: #8f5503;
+  width: 350px;
+}
+
+.cart {
+  display: flex;
+  width: 1000px;
+  color: white; 
+}
+
+.cart-content {
+  font-family: var(--font-main);
+  padding: 10px;
+  border: 2px solid white;
+  margin-right: -2px;
+}
+
+.cart-content-text {
+  padding: 10px;
+  font-size: 2em;
+  height: 100px;
+}
+
 /* ---------- Category nav (index) ---------- */
 
 .categories {

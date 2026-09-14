@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>John's Japanese Stationery</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/x-icon" href="Images/favicon.jpeg">
 </head>
 <body>
 
@@ -22,7 +23,15 @@
     </div>
     <div class="scroll-cue">Scroll</div>
   </header>
-
+  <div style = "display: grid; justify-content: right; padding: 10px; position: absolute; z-index: 1;">
+    <a style = "color: black">Search stationery...</a>
+    <div class = "searchbar">
+      <input type="search" class = "searchbar-input" placeholder = "Search">
+    </div>
+    <div id = "list" class = "searchresults"></div>
+    <script src = "pages.js"></script>
+    <script src = "searchbar.js"></script>
+  </div>
   <!-- ===================== CATEGORY NAV ===================== -->
   <section class="categories" id="categories">
     <div class="wrap">
